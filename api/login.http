@@ -1,0 +1,64 @@
+GET https://cloud.linkwarden.app/api/v1/auth/providers
+
+###
+
+GET https://cloud.linkwarden.app/api/v1/auth/csrf
+
+###
+
+
+POST https://cloud.linkwarden.app/api/v1/auth/callback/credentials
+Content-Type: application/x-www-form-urlencoded
+
+username=user@example.com
+&password=secret
+&redirect=false
+&json=true
+&callbackUrl=https://cloud.linkwarden.app/login
+&csrfToken=
+
+###
+GET https://cloud.linkwarden.app/api/v1/auth/session
+Content-Type: application/json
+Referer: https://cloud.linkwarden.app/login
+Cookie: __Secure-next-auth.session-token=
+
+###
+GET https://cloud.linkwarden.app/api/v1/users/1234
+Content-Type: application/json
+Cookie: __Secure-next-auth.session-token=
+
+###
+GET https://cloud.linkwarden.app/api/v1/collections
+Content-Type: application/json
+Cookie: __Secure-next-auth.session-token=
+
+###
+GET https://cloud.linkwarden.app/api/v1/tags
+Content-Type: application/json
+Cookie: __Secure-next-auth.session-token=
+
+###
+GET https://cloud.linkwarden.app/api/v1/dashboard
+Content-Type: application/json
+Cookie: __Secure-next-auth.session-token=
+
+###
+GET https://cloud.linkwarden.app/api/v1/dashboard?cursor=1234
+Content-Type: application/json
+Cookie: __Secure-next-auth.session-token=
+
+###
+GET https://cloud.linkwarden.app/api/v1/collections
+Content-Type: application/json
+Cookie: __Secure-next-auth.session-token=
+
+###
+GET https://cloud.linkwarden.app/api/v1/links?sort=0&collectionId=1234
+Content-Type: application/json
+Cookie: __Secure-next-auth.session-token=
+
+###
+GET https://cloud.linkwarden.app/api/v1/links?sort=0&pinnedOnly=true
+Content-Type: application/json
+Cookie: __Secure-next-auth.session-token=
